@@ -1,4 +1,4 @@
-# Link Shortener  -  React App
+# Random Quote Generator  -  React App
 
 -This is a super cool Random Quote Generator App!
 
