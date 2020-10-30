@@ -32,19 +32,29 @@ function App() {
     .then(data => setQuote(data))
     .catch(error => console.log("Error: ", error))   
   }
-  const randomQuote = e => {
+/*   const randomQuote = e => {
     const len = fetchQuote.length;
     setColor(Math.floor(Math.random() * len));
   }
-
+ */
 
   const results = quote.quotes.map((value) => {
     return (
-      <div className="text-container" style={{backgroundColor: colors[color]}} >
-        <div className="text-wrapper" style={{color: colors[color]}} >
+      <div className="container" style={{backgroundColor: colors[color]}} >
+        <div className="wrapper" style={{color: colors[color]}} >
           <p>"{value.quote}"</p>
-          <p className="text-author" >- {value.author} </p>
-          <button className="button" style={{backgroundColor: colors[color]}} onClick={randomColors} >New Quote</button>
+          <p>- {value.author} </p>
+
+            <div className="subcontainer">
+              <i style={{color: colors[color]}} className="icon-group icon1 fab fa-github-square"></i>
+              <i style={{color: colors[color]}} className="icon-group icon2 fab fa-linkedin"></i>
+              <button className="button" style={{backgroundColor: colors[color]}} onClick={randomColors} >New Quote</button>
+            </div>
+
+            <div>
+              <p className="footer" >By <a href="https://mariabeckles.herokuapp.com/" target="blank" > Maria Beckles </a> </p>
+            </div>
+
         </div>
       </div>
     )
